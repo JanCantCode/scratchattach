@@ -31,6 +31,9 @@ class CloudRequests:
 
         if function.__name__ == "on_ready":
             self.on_ready = function
+            
+        if function.__name__ == "tick":
+            self.tick = function
 
     def _respond(self, request_id, response, limit, *, force_reconnect=False):
 
